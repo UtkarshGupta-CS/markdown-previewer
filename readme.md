@@ -9,7 +9,7 @@ $ npm install
 ### Run
 
 ```
-$ npm start
+$ webpack-dev-server
 ```
 
 #### For Any Query 
