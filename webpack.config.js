@@ -19,10 +19,10 @@ module.exports = {
             exclude: /node_modules/,
             loaders: ['react-hot-loader','babel-loader?presets[]=react,presets[]=es2015']
          },
-         /*{
+         {
             test: /\.txt?$/,
             loader: 'raw-loader'
-         }*/
+         }
       ]
    },
    plugins: [

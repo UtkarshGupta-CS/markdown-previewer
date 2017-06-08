@@ -9,21 +9,25 @@ export default class App extends React.Component {
       super(props);
 
       this.state = {
-         defaultText: defaultText
+         text: defaultText
       }
    }
 
    render() {
       const headingStyle = {
-         'text-align': 'center'
+         'textAlign': 'center'
       }
 
       return (
          <div>
             <h1 style={headingStyle}>Markdown Previewer</h1>
-            <InputArea defaultText={this.state.defaultText} />
-            <OutputArea />
+            <InputArea defaultText={this.state.text} handleChange={this.handleChange.bind(this)} />
+            <OutputArea output={this.state.text} />
          </div>
       )
+   }
+
+   handleChange(input) {
+      this.setState({ text: input })
    }
 }
